@@ -1,0 +1,148 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="#">⚡ JUNIOR <span>AI</span></a>
+
+    <nav>
+        <a href="#chat">AI Chat</a>
+        <a href="#tools">Tools</a>
+        <a href="#help">Get Help</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="badge">✨ YOUR AI WORKSPACE</div>
+
+    <h1>WELCOME TO<br>
+        <span class="gradient">JUNIOR AI</span>
+    </h1>
+
+    <p>Your ideas. Your code. Your creations.<br>
+       Everything starts here.</p>
+
+    <a href="#chat" class="button primary">✨ Start Chatting</a>
+</section>
+
+<section id="tools" class="section">
+    <h2>🚀 YOUR TOOLKIT</h2>
+    <p class="subtitle">What do you want to create today?</p>
+
+    <div class="cards">
+
+        <article class="card purple">
+            <div class="icon">🛠️</div>
+            <h3>Fix Code</h3>
+            <p>Paste broken code and get help correcting it.</p>
+            <button onclick="showTool('fix')">Fix My Code →</button>
+        </article>
+
+        <article class="card blue">
+            <div class="icon">📱</div>
+            <h3>Build APK</h3>
+            <p>Get help turning your Android project into an APK.</p>
+            <button onclick="showTool('apk')">Build APK →</button>
+        </article>
+
+        <article class="card pink">
+            <div class="icon">💬</div>
+            <h3>Get Help</h3>
+            <p>Ask questions about coding, websites, and apps.</p>
+            <a href="#chat" class="card-link">Ask Junior AI →</a>
+        </article>
+
+    </div>
+</section>
+
+<section id="workspace" class="workspace hidden">
+    <h2 id="toolTitle">Junior AI Tools</h2>
+
+    <div id="fixTool" class="hidden">
+        <label for="code">Paste your code:</label>
+        <textarea id="code" placeholder="Paste your broken code here..."></textarea>
+
+        <label for="error">What is wrong with it?</label>
+        <textarea id="error" placeholder="Describe the error..."></textarea>
+
+        <button class="button primary" onclick="fixCode()">
+            ✨ Fix My Code
+        </button>
+
+        <div id="fixedResult" class="result hidden">
+            <h3>Corrected Code / Answer</h3>
+            <pre id="fixedCode"></pre>
+            <button onclick="copyCode()">📋 Copy Result</button>
+        </div>
+    </div>
+
+    <div id="apkTool" class="hidden">
+        <h3>📱 Android APK Builder</h3>
+        <p>Choose what you have so Junior AI can guide you.</p>
+
+        <select id="projectType">
+            <option value="android">Android Studio project</option>
+            <option value="website">HTML website</option>
+            <option value="apk">I only have an APK</option>
+            <option value="unknown">I'm not sure</option>
+        </select>
+
+        <button class="button primary" onclick="buildAPK()">
+            🚀 Get Build Instructions
+        </button>
+
+        <div id="apkResult" class="result hidden"></div>
+    </div>
+</section>
+
+<section id="chat" class="chat-section">
+    <div class="chat-heading">
+        <div class="bot-icon">⚡</div>
+        <div>
+            <h2>Junior AI</h2>
+            <p>✨ Your AI assistant</p>
+        </div>
+        <span class="online">● READY</span>
+    </div>
+
+    <div id="messages" class="messages">
+        <div class="bubble bot">
+            👋 Hey! I'm Junior AI. Ask me about coding, websites,
+            Android apps, or anything you want to build!
+        </div>
+    </div>
+
+    <form id="chatForm">
+        <input id="question" type="text"
+            placeholder="Ask Junior AI anything..."
+            autocomplete="off" required>
+        <button type="submit">➤</button>
+    </form>
+
+    <p class="small-note">
+        AI responses require a configured server and AI API connection.
+    </p>
+</section>
+
+<section id="help" class="help">
+    <h2>Need a hand? 💜</h2>
+    <p>Tell Junior AI what you're trying to do, and get help with your project.</p>
+    <a href="#chat" class="button primary">Get Help →</a>
+</section>
+
+<footer>
+    <a class="logo" href="#">⚡ JUNIOR <span>AI</span></a>
+    <p>Made for creators. Built for ideas. 🚀</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
+```
